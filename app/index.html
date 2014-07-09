@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gotcha</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/jquery-ui.min.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-route.min.js"></script>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/date-format.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+
+        });
+    </script>
+</head>
+<body>
+<div ng-view>
+
+</div>
+<div id="dialog-form" title="Create new task">
+    <p class="validateTips">All form fields are required.</p>
+
+    <form>
+        <fieldset>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="text ui-widget-content ui-corner-all">
+            <label for="newTask">Tasks</label>
+            <textarea name="newTask" id="newTask" value="Jane Smith"
+                      class="text ui-widget-content ui-corner-all"></textarea>
+            <!-- <input type="text" name="newTask" id="newTask" value="Jane Smith" class="text ui-widget-content ui-corner-all"> -->
+            <label for="state">State</label>
+            <input type="text" name="state" id="state" value="jane@smith.com"
+                   class="text ui-widget-content ui-corner-all">
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

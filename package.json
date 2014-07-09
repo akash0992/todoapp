@@ -1,0 +1,15 @@
+{
+    "version": "0.0.0",
+    "private": true,
+    "name": "ToDoApp",
+    "description": "A To-Do App",
+    "license": "MIT",
+    "dependencies": {
+        "http-server": "^0.6.1"
+    },
+    "scripts": {
+        "start": "http-server -p 8000"
+    }
+}
+
+

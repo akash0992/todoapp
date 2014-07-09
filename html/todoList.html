@@ -1,0 +1,44 @@
+<div style="float: left;width: 50%">
+    <div class="notes">
+        <ul>
+            <li ng-repeat="task in tasks | filter:query">
+                <a>
+                    <button style='float: right' class="btn btn-xs btn-danger" type="button" ng-click="delNote(task)">
+                        x
+                    </button>
+                    <h2>{{task.title | limitTo:10}}</h2>
+
+                    <p>{{task.task}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid" style="float: right;width: 50%">
+    <div class="row">
+        <div>
+            Search: <input ng-model="query">
+            <button id="create-task" ng-click="addTasks()">Create new task</button>
+        </div>
+        <div id="tasks-contain" class="ui-widget">
+
+            <table id="tasks" class="ui-widget ui-widget-content">
+                <thead>
+                <tr class="ui-widget-header ">
+                    <th width="20%">Title</th>
+                    <th width="50%">Task</th>
+                    <th width="15%">Created</th>
+                    <th width="15%">Status</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="task in tasks | filter:query">
+                    <td width="50%">{{task.title}}</td>
+                    <td width="50%">{{task.task}}</td>
+                    <td width="35%">{{task.created}}</td>
+                    <td width="15%">{{task.status}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
